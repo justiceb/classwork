@@ -141,7 +141,7 @@ e = e.signals.values;
 figure(5)
 plot(t,e)
 xlabel('time (s)')
-ylabel('error')
+ylabel('error (m)')
 grid on
 hold all
 
@@ -165,7 +165,7 @@ e = e.signals.values;
 figure(6)
 plot(t,e)
 xlabel('time (s)')
-ylabel('error')
+ylabel('error (m)')
 grid on
 hold all
 
@@ -173,7 +173,7 @@ hold all
 kp = 10;
 ki = 15;
 kd = 0;
-t_end = t(end);
+t_end = 10;
 sim('part4')
 plot(e_sim.Time,e_sim.Data)
 legend('Actual','Sim',0)
@@ -193,10 +193,10 @@ poly_rooms = roots([m c gamma*k gamma*ki_max])
 load('justice_5_y')
 load('justice_5_v')
 load('justice_5_e')
-t = y.time;
-y = y.signals.values;
-v = v.signals.values;
-e = e.signals.values;
+t = y.time(1:end/2);
+y = y.signals.values(1:end/2);
+v = v.signals.values(1:end/2);
+e = e.signals.values(1:end/2);
 figure(8)
 subplot(3,1,1), plot(t,y)
 xlabel('time (s)')
@@ -210,9 +210,12 @@ grid on
 hold all
 subplot(3,1,3), plot(t,e)
 xlabel('time (s)')
-ylabel('error')
+ylabel('error (m)')
 grid on
 hold all
+
+%analysis
+Sa = stepinfo([0;y],[0;t],0.5,'RiseTimeLimits',[0 1],'SettlingTimeThreshold',0.05)
 
 %sim
 kp = 1000;
@@ -231,10 +234,10 @@ legend('Actual','Sim',0)
 load('justice_5b_y')
 load('justice_5b_v')
 load('justice_5b_e')
-t = y.time;
-y = y.signals.values;
-v = v.signals.values;
-e = e.signals.values;
+t = y.time(1:end/2);
+y = y.signals.values(1:end/2);
+v = v.signals.values(1:end/2);
+e = e.signals.values(1:end/2);
 figure(9)
 subplot(3,1,1), plot(t,y)
 xlabel('time (s)')
@@ -248,9 +251,12 @@ grid on
 hold all
 subplot(3,1,3), plot(t,e)
 xlabel('time (s)')
-ylabel('error')
+ylabel('error (m)')
 grid on
 hold all
+
+%analysis
+Sb = stepinfo([0;y],[0;t],0.5,'RiseTimeLimits',[0 1],'SettlingTimeThreshold',0.05)
 
 %sim
 kp = 400;
