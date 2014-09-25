@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.510"
+    ComputedModelVersion    "1.514"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -30,7 +30,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [252.0, 315.0, 965.0, 626.0]
+      Location		      [176.0, 368.0, 1187.0, 626.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -39,7 +39,7 @@ Model {
 	DockPosition		"Left"
 	Width			[50]
 	Height			[50]
-	Filter			[8]
+	Filter			[9]
       }
       Object {
 	$PropName		"ExplorerBarInfo"
@@ -53,20 +53,20 @@ Model {
 	Object {
 	  $ObjectID		  5
 	  IsActive		  [0]
-	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "6"
-	  Extents		  [915.0, 449.0]
+	  ViewObjType		  "SimulinkTopLevel"
+	  LoadSaveID		  "0"
+	  Extents		  [1137.0, 449.0]
 	  ZoomFactor		  [1.0]
-	  Offset		  [0.0, 0.0]
+	  Offset		  [0.0, -1.0]
 	}
 	Object {
 	  $ObjectID		  6
 	  IsActive		  [1]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "117"
-	  Extents		  [915.0, 449.0]
+	  Extents		  [1137.0, 449.0]
 	  ZoomFactor		  [1.0]
-	  Offset		  [-72.75, 1.5]
+	  Offset		  [-119.29629890511353, 6.0]
 	}
 	PropName		"EditorsInfo"
       }
@@ -78,9 +78,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Willdog"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu Sep 18 03:49:39 2014"
-  RTWModifiedTimeStamp	  332912821
-  ModelVersionFormat	  "1.%<AutoIncrement:510>"
+  LastModifiedDate	  "Wed Sep 24 22:56:49 2014"
+  RTWModifiedTimeStamp	  333500208
+  ModelVersionFormat	  "1.%<AutoIncrement:514>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -182,7 +182,7 @@ Model {
 	  $ObjectID		  9
 	  Version		  "1.13.0"
 	  StartTime		  "0.0"
-	  StopTime		  "15"
+	  StopTime		  "6"
 	  AbsTol		  "1e-6"
 	  FixedStep		  "0.002"
 	  InitialStep		  "auto"
@@ -1043,8 +1043,8 @@ Model {
   }
   System {
     Name		    "s_spg_pp"
-    Location		    [252, 315, 1217, 941]
-    Open		    off
+    Location		    [176, 368, 1363, 994]
+    Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
     ScreenColor		    "white"
@@ -1057,7 +1057,7 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "100"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "150"
+    SIDHighWatermark	    "152"
     Block {
       BlockType		      Gain
       Name		      "(/m)"
@@ -1140,8 +1140,8 @@ Model {
       MaskHideContents	      off
       System {
 	Name			"SPG + IP02:\nNon-Linear EOM"
-	Location		[252, 315, 1217, 941]
-	Open			on
+	Location		[176, 368, 1363, 994]
+	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
 	ScreenColor		"white"
@@ -1252,7 +1252,7 @@ Model {
 	  MaskHideContents	  off
 	  System {
 	    Name		    "xc_ddot EOM"
-	    Location		    [26, 139, 1128, 956]
+	    Location		    [176, 368, 1363, 994]
 	    Open		    off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
@@ -1617,7 +1617,7 @@ Model {
 	      MaskHideContents	      off
 	      System {
 		Name			"alpha_ddot EOM"
-		Location		[179, 66, 1168, 819]
+		Location		[176, 368, 1363, 994]
 		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
@@ -2819,7 +2819,7 @@ Model {
 	Line {
 	  SrcBlock		  "Acceleration\nto\nVelocity"
 	  SrcPort		  1
-	  Points		  [0, 0; 35, 0]
+	  Points		  [35, 0]
 	  Branch {
 	    Points		    [0, 70]
 	    Branch {
@@ -3006,7 +3006,7 @@ Model {
       MaskHideContents	      off
       System {
 	Name			"Scopes"
-	Location		[252, 315, 1217, 941]
+	Location		[176, 368, 1363, 994]
 	Open			on
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -3023,7 +3023,7 @@ Model {
 	  BlockType		  Inport
 	  Name			  "xc_des"
 	  SID			  "118"
-	  Position		  [195, 88, 225, 102]
+	  Position		  [195, 133, 225, 147]
 	  ZOrder		  -1
 	  IconDisplay		  "Port number"
 	}
@@ -3031,7 +3031,7 @@ Model {
 	  BlockType		  Inport
 	  Name			  "X_eom"
 	  SID			  "119"
-	  Position		  [30, 203, 60, 217]
+	  Position		  [30, 248, 60, 262]
 	  ZOrder		  -2
 	  Port			  "2"
 	  IconDisplay		  "Port number"
@@ -3041,7 +3041,7 @@ Model {
 	  Name			  "Mux"
 	  SID			  "120"
 	  Ports			  [2, 1]
-	  Position		  [450, 70, 455, 165]
+	  Position		  [450, 115, 455, 210]
 	  ZOrder		  -3
 	  ShowName		  off
 	  Inputs		  "2"
@@ -3052,7 +3052,7 @@ Model {
 	  Name			  "Mux3"
 	  SID			  "121"
 	  Ports			  [2, 1]
-	  Position		  [645, 183, 650, 267]
+	  Position		  [645, 228, 650, 312]
 	  ZOrder		  -4
 	  ShowName		  off
 	  Inputs		  "2"
@@ -3063,7 +3063,7 @@ Model {
 	  Name			  "Radians\nto Degrees"
 	  SID			  "122"
 	  Ports			  [1, 1]
-	  Position		  [315, 360, 345, 390]
+	  Position		  [315, 405, 345, 435]
 	  ZOrder		  -5
 	  LibraryVersion	  "1.44"
 	  SourceBlock		  "simulink_extras/Transformations/Radians\nto Degrees"
@@ -3074,7 +3074,7 @@ Model {
 	  Name			  "Sum1"
 	  SID			  "123"
 	  Ports			  [2, 1]
-	  Position		  [520, 230, 550, 260]
+	  Position		  [520, 275, 550, 305]
 	  ZOrder		  -6
 	  ShowName		  off
 	  IconShape		  "round"
@@ -3085,7 +3085,7 @@ Model {
 	  Name			  "Tip Horizontal Pos (mm)"
 	  SID			  "124"
 	  Ports			  [1]
-	  Position		  [715, 209, 745, 241]
+	  Position		  [715, 254, 745, 286]
 	  ZOrder		  -7
 	  Floating		  off
 	  Location		  [1398, 467, 1897, 751]
@@ -3115,9 +3115,21 @@ Model {
 	  Name			  "To Workspace"
 	  SID			  "150"
 	  Ports			  [1]
-	  Position		  [480, 325, 540, 355]
+	  Position		  [480, 370, 540, 400]
 	  ZOrder		  1
 	  VariableName		  "alpha_out"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Timeseries"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace1"
+	  SID			  "152"
+	  Ports			  [1]
+	  Position		  [485, 20, 545, 50]
+	  ZOrder		  3
+	  VariableName		  "xc_out_mm"
 	  MaxDataPoints		  "inf"
 	  SampleTime		  "-1"
 	  SaveFormat		  "Timeseries"
@@ -3127,7 +3139,7 @@ Model {
 	  Name			  "Trigonometric\nFunction"
 	  SID			  "125"
 	  Ports			  [1, 1]
-	  Position		  [320, 270, 350, 300]
+	  Position		  [320, 315, 350, 345]
 	  ZOrder		  -8
 	  ShowName		  off
 	}
@@ -3135,7 +3147,7 @@ Model {
 	  BlockType		  Gain
 	  Name			  "[ 1; 1; 0; 0 ]1"
 	  SID			  "126"
-	  Position		  [125, 118, 220, 162]
+	  Position		  [125, 163, 220, 207]
 	  ZOrder		  -9
 	  ShowName		  off
 	  Gain			  " [1 0 0 0]"
@@ -3145,7 +3157,7 @@ Model {
 	  BlockType		  Gain
 	  Name			  "[ 1; 1; 0; 0 ]2"
 	  SID			  "127"
-	  Position		  [140, 263, 235, 307]
+	  Position		  [140, 308, 235, 352]
 	  ZOrder		  -10
 	  ShowName		  off
 	  Gain			  " [0 1 0 0]"
@@ -3156,7 +3168,7 @@ Model {
 	  Name			  "alpha (deg)"
 	  SID			  "128"
 	  Ports			  [1]
-	  Position		  [410, 360, 440, 390]
+	  Position		  [410, 405, 440, 435]
 	  ZOrder		  -11
 	  Floating		  off
 	  Location		  [1397, 820, 1898, 1103]
@@ -3188,7 +3200,7 @@ Model {
 	  BlockType		  Gain
 	  Name			  "m To mm"
 	  SID			  "129"
-	  Position		  [255, 78, 295, 112]
+	  Position		  [255, 123, 295, 157]
 	  ZOrder		  -12
 	  ShowName		  off
 	  Gain			  " 1e3"
@@ -3197,7 +3209,7 @@ Model {
 	  BlockType		  Gain
 	  Name			  "m To mm1"
 	  SID			  "130"
-	  Position		  [385, 268, 425, 302]
+	  Position		  [385, 313, 425, 347]
 	  ZOrder		  -13
 	  ShowName		  off
 	  Gain			  " Lp"
@@ -3206,7 +3218,7 @@ Model {
 	  BlockType		  Gain
 	  Name			  "m To mm2"
 	  SID			  "131"
-	  Position		  [285, 123, 325, 157]
+	  Position		  [285, 168, 325, 202]
 	  ZOrder		  -14
 	  ShowName		  off
 	  Gain			  " 1e3"
@@ -3215,7 +3227,7 @@ Model {
 	  BlockType		  Gain
 	  Name			  "m To mm3"
 	  SID			  "132"
-	  Position		  [460, 268, 500, 302]
+	  Position		  [460, 313, 500, 347]
 	  ZOrder		  -15
 	  Gain			  " 1e3"
 	}
@@ -3224,7 +3236,7 @@ Model {
 	  Name			  "xc (mm)"
 	  SID			  "133"
 	  Ports			  [1]
-	  Position		  [485, 105, 515, 135]
+	  Position		  [485, 150, 515, 180]
 	  ZOrder		  -16
 	  Floating		  off
 	  Location		  [1393, 120, 1897, 403]
@@ -3269,7 +3281,7 @@ Model {
 	Line {
 	  SrcBlock		  "X_eom"
 	  SrcPort		  1
-	  Points		  [0, 0; 30, 0]
+	  Points		  [30, 0]
 	  Branch {
 	    Points		    [0, 75]
 	    DstBlock		    "[ 1; 1; 0; 0 ]2"
@@ -3363,8 +3375,16 @@ Model {
 	  SrcPort		  1
 	  Points		  [10, 0]
 	  Branch {
-	    DstBlock		    "Mux"
-	    DstPort		    2
+	    Points		    [92, 0]
+	    Branch {
+	      Points		      [0, -150]
+	      DstBlock		      "To Workspace1"
+	      DstPort		      1
+	    }
+	    Branch {
+	      DstBlock		      "Mux"
+	      DstPort		      2
+	    }
 	  }
 	  Branch {
 	    Points		    [0, 50; 195, 0]
@@ -3375,7 +3395,7 @@ Model {
 	Annotation {
 	  SID			  "134"
 	  Name			  "Scopes"
-	  Position		  [149, 29]
+	  Position		  [149, 74]
 	  ZOrder		  -1
 	  FontName		  "Arial"
 	  FontSize		  16
@@ -3384,41 +3404,41 @@ Model {
 	Annotation {
 	  SID			  "135"
 	  Name			  "xc_d (mm)"
-	  Position		  [398, 83]
+	  Position		  [398, 128]
 	  ZOrder		  -2
 	  FontName		  "Arial"
 	}
 	Annotation {
 	  SID			  "136"
 	  Name			  "alpha_eom"
-	  Position		  [273, 273]
+	  Position		  [273, 318]
 	  ZOrder		  -3
 	  FontName		  "Arial"
 	}
 	Annotation {
 	  SID			  "137"
 	  Name			  "State Selection"
-	  Position		  [182, 172]
+	  Position		  [182, 217]
 	  ZOrder		  -4
 	}
 	Annotation {
 	  SID			  "138"
 	  Name			  "xc_eom (mm)"
-	  Position		  [393, 128]
+	  Position		  [393, 173]
 	  ZOrder		  -5
 	  FontName		  "Arial"
 	}
 	Annotation {
 	  SID			  "139"
 	  Name			  "xc_d"
-	  Position		  [608, 198]
+	  Position		  [608, 243]
 	  ZOrder		  -6
 	  FontName		  "Arial"
 	}
 	Annotation {
 	  SID			  "140"
 	  Name			  "xt_eom"
-	  Position		  [608, 233]
+	  Position		  [608, 278]
 	  ZOrder		  -7
 	  FontName		  "Arial"
 	}
