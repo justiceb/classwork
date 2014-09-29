@@ -58,7 +58,7 @@ wp = 2*pi/period %rad/s
 %Part a: Hand in your values for the damping ratio  and natural frequency !n that you calculated.
 denom = [1 11.74 26.96 263.4];
 r = roots(denom);
-poly1 = poly(r(2:3));
+poly1 = poly(r(2:3))
 wn = sqrt(poly1(3))
 damping = poly1(2)/(2*wn)
 
@@ -71,28 +71,38 @@ bode(H)
 load part_2_w3_theta
 t3 = theta.time - theta.time(1);
 theta3 = theta.signals.values;
+amp3 = (max(theta3)-min(theta3))/2;
 load part_2_wn_theta
 tn = theta.time - theta.time(1);
 thetan = theta.signals.values;
+ampn = (-min(thetan))/1;
 load part_2_w7_theta
 t7 = theta.time - theta.time(1);
 theta7 = theta.signals.values;
+amp7 = (max(theta7)-min(theta7))/2;
 
 figure(3)
 plot(t3,theta3,tn,thetan,t7,theta7)
 xlabel('time (s)')
-ylabel('angle (degrees)')
+ylabel('angle (radians)')
 grid on
 legend('w = 3 rad/s','w = wn = 4.8 rad/s','w = 7 rad/s',0)
 
 %part e - find magnitude of xfer function at various w
-[MAG3, ~] = bode(H,3);
-[MAGn, ~] = bode(H,wn);
-[MAG7, ~] = bode(H,7);
-MAG3 = mag2db(MAG3)
-MAGn = mag2db(MAGn)
-MAG7 = mag2db(MAG7)
+A = 3;  %voltage sinusoidal amplitude input
+MAG3_calc = amp3/A
+MAGn_calc = ampn/A
+MAG7_calc = amp7/A
+MAG3db_calc = mag2db(MAG3_calc);
+MAGndb_calc = mag2db(MAGn_calc);
+MAG7db_calc = mag2db(MAG7_calc);
 
+[MAG3, ~] = bode(H,3)
+[MAGn, ~] = bode(H,wn)
+[MAG7, ~] = bode(H,7)
+MAG3db = mag2db(MAG3);
+MAGndb = mag2db(MAGn);
+MAG7db = mag2db(MAG7);
 
 
 
