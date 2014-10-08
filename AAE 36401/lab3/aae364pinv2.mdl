@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.507"
+    ComputedModelVersion    "1.508"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -39,7 +39,7 @@ Model {
 	DockPosition		"Left"
 	Width			[50]
 	Height			[50]
-	Filter			[8]
+	Filter			[9]
       }
       Object {
 	$PropName		"ExplorerBarInfo"
@@ -66,9 +66,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Willdog"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu Oct 02 04:43:49 2014"
-  RTWModifiedTimeStamp	  334125829
-  ModelVersionFormat	  "1.%<AutoIncrement:507>"
+  LastModifiedDate	  "Wed Oct 08 01:03:37 2014"
+  RTWModifiedTimeStamp	  334631016
+  ModelVersionFormat	  "1.%<AutoIncrement:508>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -2958,7 +2958,7 @@ Model {
       SID		      "120"
       Position		      [25, 195, 55, 225]
       ZOrder		      -10
-      Time		      "5"
+      Time		      "5.884"
       Before		      "-1"
       SampleTime	      "0"
     }

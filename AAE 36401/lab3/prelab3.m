@@ -5,6 +5,8 @@ CART_TYPE = 'IP02';
 IP02_LOAD_TYPE = 'WEIGHT';
 PEND_TYPE = 'LONG_24IN';
 IC_ALPHA0 = 0;
+IC_ALPHAdot0 = 0;
+xcdot_0 = 0;
 Ai = [A, zeros(4, 1);-1, 0, 0, 0, 0];
 Bi = [B; 0];
 

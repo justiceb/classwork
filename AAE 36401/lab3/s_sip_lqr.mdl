@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.495"
+    ComputedModelVersion    "1.501"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -39,7 +39,7 @@ Model {
 	DockPosition		"Left"
 	Width			[50]
 	Height			[50]
-	Filter			[8]
+	Filter			[9]
       }
       Object {
 	$PropName		"ExplorerBarInfo"
@@ -56,7 +56,7 @@ Model {
 	LoadSaveID		"117"
 	Extents			[809.0, 394.0]
 	ZoomFactor		[1.0]
-	Offset			[0.0, 0.0]
+	Offset			[6.62595915095519, 102.87735539710405]
       }
     }
   }
@@ -66,9 +66,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Willdog"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu Oct 02 03:25:16 2014"
-  RTWModifiedTimeStamp	  334121114
-  ModelVersionFormat	  "1.%<AutoIncrement:495>"
+  LastModifiedDate	  "Tue Oct 07 23:06:37 2014"
+  RTWModifiedTimeStamp	  334623996
+  ModelVersionFormat	  "1.%<AutoIncrement:501>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -1044,7 +1044,7 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "100"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "141"
+    SIDHighWatermark	    "146"
     Block {
       BlockType		      Gain
       Name		      "(/m)2"
@@ -1127,7 +1127,7 @@ Model {
       MaskHideContents	      off
       System {
 	Name			"SIP + IP01_2:\nNon-Linear EOM"
-	Location		[16, 52, 1117, 666]
+	Location		[507, 369, 1366, 937]
 	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -1139,7 +1139,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"100"
+	ZoomFactor		"80"
 	Block {
 	  BlockType		  Inport
 	  Name			  "Vm (V)"
@@ -1155,6 +1155,7 @@ Model {
 	  Ports			  [1, 1]
 	  Position		  [770, 230, 800, 260]
 	  ZOrder		  -2
+	  InitialCondition	  "xcdot_0"
 	}
 	Block {
 	  BlockType		  Gain
@@ -1237,7 +1238,7 @@ Model {
 	  MaskHideContents	  off
 	  System {
 	    Name		    "xc_ddot EOM"
-	    Location		    [65, 106, 1133, 923]
+	    Location		    [507, 369, 1366, 937]
 	    Open		    off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
@@ -1602,7 +1603,7 @@ Model {
 	      MaskHideContents	      off
 	      System {
 		Name			"alpha_ddot EOM"
-		Location		[173, 68, 1187, 839]
+		Location		[507, 369, 1366, 937]
 		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
@@ -1650,6 +1651,7 @@ Model {
 		  Position		  [495, 260, 525, 290]
 		  ZOrder		  -4
 		  ShowName		  off
+		  InitialCondition	  "IC_ALPHAdot0"
 		}
 		Block {
 		  BlockType		  BusCreator
@@ -2064,7 +2066,7 @@ Model {
 		  Labels		  [0, 0]
 		  SrcBlock		  "Acceleratio\nto\nVelocity1"
 		  SrcPort		  1
-		  Points		  [0, 0; 65, 0]
+		  Points		  [65, 0]
 		  Branch {
 		    Points		    [0, -35]
 		    Branch {
@@ -2124,7 +2126,7 @@ Model {
 		  Labels		  [0, 0]
 		  SrcBlock		  "Bus\nSelector1"
 		  SrcPort		  3
-		  Points		  [0, 0; -95, 0]
+		  Points		  [-95, 0]
 		  Branch {
 		    Points		    [0, 55]
 		    DstBlock		    "Voltage\nto\nCurrent5"
@@ -2168,7 +2170,7 @@ Model {
 		Line {
 		  SrcBlock		  "Bus\nCreator"
 		  SrcPort		  1
-		  Points		  [0, 0; 30, 0]
+		  Points		  [30, 0]
 		  Branch {
 		    DstBlock		    "Bus\nSelector3"
 		    DstPort		    1
@@ -2259,7 +2261,7 @@ Model {
 		  Labels		  [0, 0]
 		  SrcBlock		  "Bus\nSelector1"
 		  SrcPort		  1
-		  Points		  [0, 0; -95, 0]
+		  Points		  [-95, 0]
 		  Branch {
 		    DstBlock		    "Voltage\nto\nCurrent2"
 		    DstPort		    1
@@ -2507,7 +2509,7 @@ Model {
 	    Line {
 	      SrcBlock		      "Bus\nCreator1"
 	      SrcPort		      1
-	      Points		      [0, 0; 10, 0]
+	      Points		      [10, 0]
 	      Branch {
 		Points			[0, 285]
 		DstBlock		"Bus\nSelector5"
@@ -2801,7 +2803,7 @@ Model {
 	Line {
 	  SrcBlock		  "Acceleration\nto\nVelocity"
 	  SrcPort		  1
-	  Points		  [0, 0; 35, 0]
+	  Points		  [35, 0]
 	  Branch {
 	    Points		    [0, 70]
 	    Branch {
@@ -3041,6 +3043,17 @@ Model {
 	  SourceType		  "RadiansToDegrees"
 	}
 	Block {
+	  BlockType		  Reference
+	  Name			  "Radians\nto Degrees1"
+	  SID			  "144"
+	  Ports			  [1, 1]
+	  Position		  [270, 370, 300, 400]
+	  ZOrder		  5
+	  LibraryVersion	  "1.44"
+	  SourceBlock		  "simulink_extras/Transformations/Radians\nto Degrees"
+	  SourceType		  "RadiansToDegrees"
+	}
+	Block {
 	  BlockType		  ToWorkspace
 	  Name			  "To Workspace"
 	  SID			  "140"
@@ -3065,6 +3078,30 @@ Model {
 	  SaveFormat		  "Timeseries"
 	}
 	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace2"
+	  SID			  "142"
+	  Ports			  [1]
+	  Position		  [390, 370, 500, 400]
+	  ZOrder		  3
+	  VariableName		  "alphadot_out"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Timeseries"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace3"
+	  SID			  "146"
+	  Ports			  [1]
+	  Position		  [400, 460, 460, 490]
+	  ZOrder		  7
+	  VariableName		  "xcdot_out"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Timeseries"
+	}
+	Block {
 	  BlockType		  Gain
 	  Name			  "[ 1; 1; 0; 0 ]1"
 	  SID			  "122"
@@ -3082,6 +3119,26 @@ Model {
 	  ZOrder		  -6
 	  ShowName		  off
 	  Gain			  " [0 1 0 0]"
+	  Multiplication	  "Matrix(K*u)"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "[ 1; 1; 0; 0 ]3"
+	  SID			  "143"
+	  Position		  [130, 363, 225, 407]
+	  ZOrder		  4
+	  ShowName		  off
+	  Gain			  " [0 0 0 1]"
+	  Multiplication	  "Matrix(K*u)"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "[ 1; 1; 0; 0 ]4"
+	  SID			  "145"
+	  Position		  [140, 453, 235, 497]
+	  ZOrder		  6
+	  ShowName		  off
+	  Gain			  " [0 0 1 0]"
 	  Multiplication	  "Matrix(K*u)"
 	}
 	Block {
@@ -3172,7 +3229,7 @@ Model {
 	Line {
 	  SrcBlock		  "X_eom"
 	  SrcPort		  1
-	  Points		  [0, 0; 30, 0]
+	  Points		  [30, 0]
 	  Branch {
 	    Points		    [0, -45]
 	    DstBlock		    "[ 1; 1; 0; 0 ]1"
@@ -3180,8 +3237,22 @@ Model {
 	  }
 	  Branch {
 	    Points		    [0, 50]
-	    DstBlock		    "[ 1; 1; 0; 0 ]2"
-	    DstPort		    1
+	    Branch {
+	      Points		      [0, 150]
+	      Branch {
+		Points			[0, 90]
+		DstBlock		"[ 1; 1; 0; 0 ]4"
+		DstPort			1
+	      }
+	      Branch {
+		DstBlock		"[ 1; 1; 0; 0 ]3"
+		DstPort			1
+	      }
+	    }
+	    Branch {
+	      DstBlock		      "[ 1; 1; 0; 0 ]2"
+	      DstPort		      1
+	    }
 	  }
 	}
 	Line {
@@ -3202,6 +3273,24 @@ Model {
 	  SrcBlock		  "[ 1; 1; 0; 0 ]2"
 	  SrcPort		  1
 	  DstBlock		  "Radians\nto Degrees"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "[ 1; 1; 0; 0 ]3"
+	  SrcPort		  1
+	  DstBlock		  "Radians\nto Degrees1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Radians\nto Degrees1"
+	  SrcPort		  1
+	  DstBlock		  "To Workspace2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "[ 1; 1; 0; 0 ]4"
+	  SrcPort		  1
+	  DstBlock		  "To Workspace3"
 	  DstPort		  1
 	}
 	Annotation {
