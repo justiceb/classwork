@@ -1,0 +1,1006 @@
+Model {
+  Name			  "FlatEarth_MATLAB5"
+  Version		  2.20
+  SimParamPage		  Solver
+  SampleTimeColors	  off
+  InvariantConstants	  off
+  WideVectorLines	  off
+  ShowLineWidths	  off
+  StartTime		  "0.0"
+  StopTime		  "10.0"
+  Solver		  ode45
+  RelTol		  "1e-3"
+  AbsTol		  "auto"
+  Refine		  "1"
+  MaxStep		  "auto"
+  InitialStep		  "auto"
+  FixedStep		  "auto"
+  MaxOrder		  5
+  OutputOption		  RefineOutputTimes
+  OutputTimes		  "[]"
+  LoadExternalInput	  off
+  ExternalInput		  "[t, u]"
+  SaveTime		  on
+  TimeSaveName		  "tout"
+  SaveState		  off
+  StateSaveName		  "xout"
+  SaveOutput		  on
+  OutputSaveName	  "yout"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  LimitMaxRows		  off
+  MaxRows		  "1000"
+  Decimation		  "1"
+  AlgebraicLoopMsg	  warning
+  MinStepSizeMsg	  warning
+  UnconnectedInputMsg	  warning
+  UnconnectedOutputMsg	  warning
+  UnconnectedLineMsg	  warning
+  ConsistencyChecking	  off
+  ZeroCross		  on
+  SimulationMode	  normal
+  RTWSystemTargetFile	  "grt.tlc"
+  RTWInlineParameters	  off
+  RTWPlaceOutputsASAP	  off
+  RTWRetainRTWFile	  off
+  RTWTemplateMakefile	  "grt_default_tmf"
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  ExtModeMexFile	  "ext_comm"
+  ExtModeBatchMode	  off
+  BlockDefaults {
+    Orientation		    right
+    ForegroundColor	    black
+    BackgroundColor	    white
+    DropShadow		    off
+    NamePlacement	    normal
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    normal
+    FontAngle		    normal
+    ShowName		    on
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    center
+    VerticalAlignment	    middle
+    ForegroundColor	    black
+    BackgroundColor	    white
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    normal
+    FontAngle		    normal
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    normal
+    FontAngle		    normal
+  }
+  System {
+    Name		    "FlatEarth_MATLAB5"
+    Location		    [42, 88, 970, 751]
+    Open		    on
+    ToolBar		    on
+    StatusBar		    on
+    ScreenColor		    white
+    PaperOrientation	    landscape
+    PaperPositionMode	    auto
+    PaperType		    usletter
+    PaperUnits		    inches
+    Block {
+      BlockType		      Step
+      Name		      "Aileron Perturbation (rad)"
+      Position		      [60, 225, 90, 255]
+      Time		      "1"
+      Before		      "0"
+      After		      "0"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Aileron Trim (rad)"
+      Position		      [65, 280, 95, 310]
+      Value		      "uIC(2)"
+    }
+    Block {
+      BlockType		      Clock
+      Name		      "Clock"
+      Position		      [290, 605, 310, 625]
+      Location		      [30, 40, 140, 75]
+    }
+    Block {
+      BlockType		      Demux
+      Name		      "Demux"
+      Ports		      [1, 19, 0, 0, 0]
+      Position		      [525, 83, 570, 627]
+      Outputs		      "19"
+    }
+    Block {
+      BlockType		      Step
+      Name		      "Elevator Perturbation (rad)"
+      Position		      [65, 95, 95, 125]
+      Time		      "1"
+      Before		      "0"
+      After		      "0"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Elevator Trim (rad)"
+      Position		      [60, 150, 90, 180]
+      Value		      "uIC(1)"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "H (ft)"
+      Ports		      [1, 0, 0, 0, 0]
+      Position		      [640, 399, 670, 431]
+      Floating		      off
+      Location		      [188, 365, 512, 604]
+      Open		      off
+      Grid		      on
+      TickLabels	      on
+      ZoomMode		      on
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData11"
+      LimitMaxRows	      on
+      MaxRows		      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Hdot (ft/sec)"
+      Ports		      [1, 0, 0, 0, 0]
+      Position		      [645, 609, 675, 641]
+      Floating		      off
+      Location		      [188, 365, 512, 604]
+      Open		      off
+      Grid		      on
+      TickLabels	      on
+      ZoomMode		      on
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData18"
+      LimitMaxRows	      on
+      MaxRows		      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Step
+      Name		      "Horsepower Perturbation (hp)"
+      Position		      [75, 510, 105, 540]
+      Time		      "1"
+      Before		      "0"
+      After		      "0"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Horsepower Trim (hp)"
+      Position		      [80, 560, 110, 590]
+      Value		      "uIC(4)"
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "Mux"
+      Ports		      [7, 1, 0, 0, 0]
+      Position		      [355, 127, 395, 573]
+      Inputs		      "7"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "P (rad/sec)"
+      Ports		      [1, 0, 0, 0, 0]
+      Position		      [755, 159, 785, 191]
+      Floating		      off
+      Location		      [248, 269, 572, 508]
+      Open		      off
+      Grid		      on
+      TickLabels	      on
+      ZoomMode		      on
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData3"
+      LimitMaxRows	      on
+      MaxRows		      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Phi (rad)"
+      Ports		      [1, 0, 0, 0, 0]
+      Position		      [765, 249, 795, 281]
+      Floating		      off
+      Location		      [188, 365, 512, 604]
+      Open		      off
+      Grid		      on
+      TickLabels	      on
+      ZoomMode		      on
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData6"
+      LimitMaxRows	      on
+      MaxRows		      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Psi (rad)"
+      Ports		      [1, 0, 0, 0, 0]
+      Position		      [640, 309, 670, 341]
+      Floating		      off
+      Location		      [188, 365, 512, 604]
+      Open		      off
+      Grid		      on
+      TickLabels	      on
+      ZoomMode		      on
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData8"
+      LimitMaxRows	      on
+      MaxRows		      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Q (rad/sec)"
+      Ports		      [1, 0, 0, 0, 0]
+      Position		      [705, 189, 735, 221]
+      Floating		      off
+      Location		      [458, 180, 782, 419]
+      Open		      off
+      Grid		      on
+      TickLabels	      on
+      ZoomMode		      on
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData4"
+      LimitMaxRows	      on
+      MaxRows		      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "R (rad/sec)"
+      Ports		      [1, 0, 0, 0, 0]
+      Position		      [650, 219, 680, 251]
+      Floating		      off
+      Location		      [672, 255, 1002, 646]
+      Open		      off
+      Grid		      on
+      TickLabels	      on
+      ZoomMode		      on
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData5"
+      LimitMaxRows	      on
+      MaxRows		      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Step
+      Name		      "Rudder Perturbation (rad)"
+      Position		      [45, 375, 75, 405]
+      Time		      "1"
+      Before		      "0"
+      After		      "10/57.3"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Rudder Trim (rad)"
+      Position		      [40, 435, 70, 465]
+      Value		      "uIC(3)"
+    }
+    Block {
+      BlockType		      "S-Function"
+      Name		      "S-Function\nAircraft with \nsteady winds"
+      Ports		      [1, 1, 0, 0, 0]
+      Position		      [425, 335, 485, 365]
+      FunctionName	      "aircraft7"
+      Parameters	      "constant,xIC"
+      PortCounts	      "[]"
+      SFunctionModules	      "''"
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum"
+      Ports		      [2, 1, 0, 0, 0]
+      Position		      [140, 102, 170, 133]
+      Inputs		      "++"
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum1"
+      Ports		      [2, 1, 0, 0, 0]
+      Position		      [135, 232, 165, 263]
+      Inputs		      "++"
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum2"
+      Ports		      [2, 1, 0, 0, 0]
+      Position		      [125, 382, 155, 413]
+      Inputs		      "++"
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum3"
+      Ports		      [2, 1, 0, 0, 0]
+      Position		      [160, 517, 190, 548]
+      Inputs		      "++"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Theta (rad)"
+      Ports		      [1, 0, 0, 0, 0]
+      Position		      [700, 279, 730, 311]
+      Floating		      off
+      Location		      [188, 365, 512, 604]
+      Open		      off
+      Grid		      on
+      TickLabels	      on
+      ZoomMode		      on
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData7"
+      LimitMaxRows	      on
+      MaxRows		      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "To Workspace"
+      Position		      [390, 600, 450, 630]
+      VariableName	      "taircraft"
+      Buffer		      "1000"
+      Decimation	      "1"
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "To Workspace1"
+      Position		      [430, 440, 490, 470]
+      Orientation	      left
+      VariableName	      "yaircraft"
+      Buffer		      "1000"
+      Decimation	      "1"
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "To Workspace2"
+      Position		      [255, 105, 315, 135]
+      VariableName	      "deltaE"
+      Buffer		      "1000"
+      Decimation	      "1"
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "To Workspace3"
+      Position		      [265, 195, 325, 225]
+      VariableName	      "deltaA"
+      Buffer		      "1000"
+      Decimation	      "1"
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "To Workspace4"
+      Position		      [200, 260, 260, 290]
+      VariableName	      "deltaR"
+      Buffer		      "1000"
+      Decimation	      "1"
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "To Workspace5"
+      Position		      [230, 315, 290, 345]
+      VariableName	      "deltabhp"
+      Buffer		      "1000"
+      Decimation	      "1"
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "U (ft/sec)"
+      Ports		      [1, 0, 0, 0, 0]
+      Position		      [750, 69, 780, 101]
+      Floating		      off
+      Location		      [188, 365, 512, 604]
+      Open		      off
+      Grid		      on
+      TickLabels	      on
+      ZoomMode		      on
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      LimitMaxRows	      on
+      MaxRows		      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "V (ft/sec)"
+      Ports		      [1, 0, 0, 0, 0]
+      Position		      [705, 99, 735, 131]
+      Floating		      off
+      Location		      [188, 365, 512, 604]
+      Open		      off
+      Grid		      on
+      TickLabels	      on
+      ZoomMode		      on
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData1"
+      LimitMaxRows	      on
+      MaxRows		      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Vt (ft/sec)"
+      Ports		      [1, 0, 0, 0, 0]
+      Position		      [755, 429, 785, 461]
+      Floating		      off
+      Location		      [188, 365, 512, 604]
+      Open		      off
+      Grid		      on
+      TickLabels	      on
+      ZoomMode		      on
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData12"
+      LimitMaxRows	      on
+      MaxRows		      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Vwx (ft/sec)"
+      Position		      [260, 400, 290, 430]
+      Value		      "uIC(5)"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Vwy (ft/sec)"
+      Position		      [260, 465, 290, 495]
+      Value		      "uIC(6)"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Vwz (ft/sec)"
+      Position		      [260, 530, 290, 560]
+      Value		      "uIC(7)"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "W (ft/sec)"
+      Ports		      [1, 0, 0, 0, 0]
+      Position		      [655, 129, 685, 161]
+      Floating		      off
+      Location		      [634, 343, 958, 582]
+      Open		      off
+      Grid		      on
+      TickLabels	      on
+      ZoomMode		      on
+      TimeRange		      "auto"
+      YMin		      "0"
+      YMax		      "14"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData2"
+      LimitMaxRows	      on
+      MaxRows		      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "X (ft)"
+      Ports		      [1, 0, 0, 0, 0]
+      Position		      [760, 339, 790, 371]
+      Floating		      off
+      Location		      [188, 365, 512, 604]
+      Open		      off
+      Grid		      on
+      TickLabels	      on
+      ZoomMode		      on
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData9"
+      LimitMaxRows	      on
+      MaxRows		      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Xdot (ft/s)"
+      Ports		      [1, 0, 0, 0, 0]
+      Position		      [765, 549, 795, 581]
+      Floating		      off
+      Location		      [188, 365, 512, 604]
+      Open		      off
+      Grid		      on
+      TickLabels	      on
+      ZoomMode		      on
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData16"
+      LimitMaxRows	      on
+      MaxRows		      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Y (ft)"
+      Ports		      [1, 0, 0, 0, 0]
+      Position		      [700, 369, 730, 401]
+      Floating		      off
+      Location		      [188, 365, 512, 604]
+      Open		      off
+      Grid		      on
+      TickLabels	      on
+      ZoomMode		      on
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData10"
+      LimitMaxRows	      on
+      MaxRows		      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Ydot (ft/s)"
+      Ports		      [1, 0, 0, 0, 0]
+      Position		      [700, 579, 730, 611]
+      Floating		      off
+      Location		      [188, 365, 512, 604]
+      Open		      off
+      Grid		      on
+      TickLabels	      on
+      ZoomMode		      on
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData17"
+      LimitMaxRows	      on
+      MaxRows		      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "alpha (rad)"
+      Ports		      [1, 0, 0, 0, 0]
+      Position		      [690, 459, 720, 491]
+      Floating		      off
+      Location		      [188, 365, 512, 604]
+      Open		      off
+      Grid		      on
+      TickLabels	      on
+      ZoomMode		      on
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData13"
+      LimitMaxRows	      on
+      MaxRows		      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "beta (rad)"
+      Ports		      [1, 0, 0, 0, 0]
+      Position		      [630, 489, 660, 521]
+      Floating		      off
+      Location		      [188, 365, 512, 604]
+      Open		      off
+      Grid		      on
+      TickLabels	      on
+      ZoomMode		      on
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData14"
+      LimitMaxRows	      on
+      MaxRows		      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "gamma(rad)"
+      Ports		      [1, 0, 0, 0, 0]
+      Position		      [695, 519, 725, 551]
+      Floating		      off
+      Location		      [188, 365, 512, 604]
+      Open		      off
+      Grid		      on
+      TickLabels	      on
+      ZoomMode		      on
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData15"
+      LimitMaxRows	      on
+      MaxRows		      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Line {
+      SrcBlock		      "Elevator Perturbation (rad)"
+      SrcPort		      1
+      DstBlock		      "Sum"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Aileron Perturbation (rad)"
+      SrcPort		      1
+      DstBlock		      "Sum1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Vwx (ft/sec)"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      5
+    }
+    Line {
+      SrcBlock		      "Vwy (ft/sec)"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      6
+    }
+    Line {
+      SrcBlock		      "Vwz (ft/sec)"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      7
+    }
+    Line {
+      SrcBlock		      "Mux"
+      SrcPort		      1
+      DstBlock		      "S-Function\nAircraft with \nsteady winds"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      1
+      DstBlock		      "U (ft/sec)"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      2
+      DstBlock		      "V (ft/sec)"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      3
+      DstBlock		      "W (ft/sec)"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      4
+      DstBlock		      "P (rad/sec)"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      5
+      DstBlock		      "Q (rad/sec)"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      6
+      DstBlock		      "R (rad/sec)"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      7
+      DstBlock		      "Phi (rad)"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      8
+      DstBlock		      "Theta (rad)"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      9
+      DstBlock		      "Psi (rad)"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      10
+      DstBlock		      "X (ft)"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      11
+      DstBlock		      "Y (ft)"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      12
+      DstBlock		      "H (ft)"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      13
+      DstBlock		      "Vt (ft/sec)"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      14
+      DstBlock		      "alpha (rad)"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      15
+      DstBlock		      "beta (rad)"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      19
+      DstBlock		      "Hdot (ft/sec)"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      18
+      DstBlock		      "Ydot (ft/s)"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      17
+      DstBlock		      "Xdot (ft/s)"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      16
+      DstBlock		      "gamma(rad)"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "S-Function\nAircraft with \nsteady winds"
+      SrcPort		      1
+      Points		      [0, 5; 15, 0]
+      Branch {
+	DstBlock		"Demux"
+	DstPort			1
+      }
+      Branch {
+	DstBlock		"To Workspace1"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Clock"
+      SrcPort		      1
+      DstBlock		      "To Workspace"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Elevator Trim (rad)"
+      SrcPort		      1
+      Points		      [30, 0]
+      DstBlock		      "Sum"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Sum"
+      SrcPort		      1
+      Points		      [30, 0]
+      Branch {
+	DstBlock		"To Workspace2"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 35]
+	DstBlock		"Mux"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Aileron Trim (rad)"
+      SrcPort		      1
+      Points		      [15, 0; 0, -40]
+      DstBlock		      "Sum1"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Sum1"
+      SrcPort		      1
+      Points		      [25, 0; 0, -5; 55, 0]
+      Branch {
+	DstBlock		"To Workspace3"
+	DstPort			1
+      }
+      Branch {
+	Points			[90, 0]
+	DstBlock		"Mux"
+	DstPort			2
+      }
+    }
+    Line {
+      SrcBlock		      "Rudder Perturbation (rad)"
+      SrcPort		      1
+      DstBlock		      "Sum2"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Rudder Trim (rad)"
+      SrcPort		      1
+      Points		      [35, 0]
+      DstBlock		      "Sum2"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Sum2"
+      SrcPort		      1
+      Points		      [0, -95]
+      Branch {
+	Points			[0, -30]
+	DstBlock		"To Workspace4"
+	DstPort			1
+      }
+      Branch {
+	Points			[140, 0; 0, -20]
+	DstBlock		"Mux"
+	DstPort			3
+      }
+    }
+    Line {
+      SrcBlock		      "Horsepower Perturbation (hp)"
+      SrcPort		      1
+      DstBlock		      "Sum3"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Horsepower Trim (hp)"
+      SrcPort		      1
+      Points		      [10, 0; 0, -35]
+      DstBlock		      "Sum3"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Sum3"
+      SrcPort		      1
+      Points		      [0, -170]
+      Branch {
+	Points			[0, -35]
+	DstBlock		"To Workspace5"
+	DstPort			1
+      }
+      Branch {
+	Points			[115, 0; 0, -15]
+	DstBlock		"Mux"
+	DstPort			4
+      }
+    }
+    Annotation {
+      Position		      [435, 15]
+      Text		      "Matlab 5 Version: Flat Earth Aircraft Simulatio"
+"n With Steady Winds"
+      FontSize		      14
+      FontWeight	      bold
+    }
+    Annotation {
+      Position		      [741, 16]
+      Text		      "Version 8.0,1/23/03"
+    }
+    Annotation {
+      Position		      [216, 42]
+      ForegroundColor	      red
+      Text		      "Be sure that \"constant,\" xIC and uIC are defi"
+"ned in the MATLAB workspace before running."
+    }
+    Annotation {
+      Position		      [211, 58]
+      ForegroundColor	      green
+      Text		      "Aircraft specific constants are all in the arra"
+"y called \"constant\" in the MATLAB workspace."
+    }
+    Annotation {
+      Position		      [274, 392]
+      Text		      "Steady Winds"
+    }
+    Annotation {
+      Position		      [385, 109]
+      Text		      "Inputs"
+    }
+    Annotation {
+      Position		      [629, 66]
+      Text		      "Outputs"
+    }
+    Annotation {
+      Position		      [243, 75]
+      Text		      "To generate a step response, change the final v"
+"alue in the appropriate control perturbation step block."
+    }
+  }
+}

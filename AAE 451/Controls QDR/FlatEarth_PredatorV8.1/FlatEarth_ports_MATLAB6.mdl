@@ -1,0 +1,611 @@
+Model {
+  Name			  "FlatEarth7b"
+  Version		  4.00
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowStorageClass	  off
+  ExecutionOrder	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Mon Sep 23 14:43:12 2002"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "andrisan"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Wed Oct 09 16:52:46 2002"
+  ModelVersionFormat	  "1.%<AutoIncrement:10>"
+  ConfigurationManager	  "None"
+  SimParamPage		  "Solver"
+  StartTime		  "0.0"
+  StopTime		  "10.0"
+  SolverMode		  "Auto"
+  Solver		  "ode45"
+  RelTol		  "1e-3"
+  AbsTol		  "auto"
+  Refine		  "1"
+  MaxStep		  "auto"
+  MinStep		  "auto"
+  MaxNumMinSteps	  "-1"
+  InitialStep		  "auto"
+  FixedStep		  "auto"
+  MaxOrder		  5
+  OutputOption		  "RefineOutputTimes"
+  OutputTimes		  "[]"
+  LoadExternalInput	  off
+  ExternalInput		  "[t, u]"
+  SaveTime		  on
+  TimeSaveName		  "tout"
+  SaveState		  off
+  StateSaveName		  "xout"
+  SaveOutput		  on
+  OutputSaveName	  "yout"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  SaveFormat		  "Array"
+  LimitDataPoints	  on
+  MaxDataPoints		  "1000"
+  Decimation		  "1"
+  AlgebraicLoopMsg	  "warning"
+  MinStepSizeMsg	  "warning"
+  UnconnectedInputMsg	  "warning"
+  UnconnectedOutputMsg	  "warning"
+  UnconnectedLineMsg	  "warning"
+  InheritedTsInSrcMsg	  "warning"
+  SingleTaskRateTransMsg  "none"
+  MultiTaskRateTransMsg	  "error"
+  IntegerOverflowMsg	  "warning"
+  CheckForMatrixSingularity "none"
+  UnnecessaryDatatypeConvMsg "none"
+  Int32ToFloatConvMsg	  "warning"
+  InvalidFcnCallConnMsg	  "error"
+  SignalLabelMismatchMsg  "none"
+  LinearizationMsg	  "none"
+  VectorMatrixConversionMsg "none"
+  SfunCompatibilityCheckMsg "none"
+  BlockPriorityViolationMsg "warning"
+  ArrayBoundsChecking	  "none"
+  ConsistencyChecking	  "none"
+  ZeroCross		  on
+  Profile		  off
+  SimulationMode	  "normal"
+  RTWSystemTargetFile	  "grt.tlc"
+  RTWInlineParameters	  off
+  RTWRetainRTWFile	  off
+  RTWTemplateMakefile	  "grt_default_tmf"
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  TLCProfiler		  off
+  TLCDebug		  off
+  TLCCoverage		  off
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  ExtModeMexFile	  "ext_comm"
+  ExtModeBatchMode	  off
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  OptimizeBlockIOStorage  on
+  BufferReuse		  on
+  ParameterPooling	  on
+  BlockReductionOpt	  on
+  RTWExpressionDepthLimit 5
+  BooleanDataType	  off
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "FlatEarth7b"
+    Location		    [63, 82, 918, 741]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "automatic"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      Inport
+      Name		      "In1"
+      Position		      [140, 143, 170, 157]
+      Port		      "1"
+      LatchInput	      off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "In2"
+      Position		      [145, 198, 175, 212]
+      Port		      "2"
+      LatchInput	      off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "In3"
+      Position		      [150, 253, 180, 267]
+      Port		      "3"
+      LatchInput	      off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "In4"
+      Position		      [145, 308, 175, 322]
+      Port		      "4"
+      LatchInput	      off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "In5"
+      Position		      [145, 363, 175, 377]
+      Port		      "5"
+      LatchInput	      off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "In6"
+      Position		      [145, 418, 175, 432]
+      Port		      "6"
+      LatchInput	      off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "In7"
+      Position		      [150, 468, 180, 482]
+      Port		      "7"
+      LatchInput	      off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Demux
+      Name		      "Demux"
+      Ports		      [1, 19]
+      Position		      [545, 64, 555, 566]
+      BackgroundColor	      "black"
+      ShowName		      off
+      Outputs		      "19"
+      BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "Mux"
+      Ports		      [7, 1]
+      Position		      [340, 115, 350, 515]
+      ShowName		      off
+      Inputs		      "7"
+      DisplayOption	      "bar"
+    }
+    Block {
+      BlockType		      "S-Function"
+      Name		      "S-Function\nAircraft with \nsteady winds"
+      Ports		      [1, 1]
+      Position		      [425, 300, 485, 330]
+      FunctionName	      "aircraft7"
+      Parameters	      "constant,xIC"
+      PortCounts	      "[]"
+      SFunctionModules	      "''"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Out1"
+      Position		      [600, 43, 630, 57]
+      Port		      "1"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Out2"
+      Position		      [645, 68, 675, 82]
+      Port		      "2"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Out3"
+      Position		      [685, 93, 715, 107]
+      Port		      "3"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Out4"
+      Position		      [695, 133, 725, 147]
+      Port		      "4"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Out5"
+      Position		      [740, 153, 770, 167]
+      Port		      "5"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Out6"
+      Position		      [650, 183, 680, 197]
+      Port		      "6"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Out7"
+      Position		      [695, 208, 725, 222]
+      Port		      "7"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Out8"
+      Position		      [740, 233, 770, 247]
+      Port		      "8"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Out9"
+      Position		      [650, 283, 680, 297]
+      Port		      "9"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Out10"
+      Position		      [700, 308, 730, 322]
+      Port		      "10"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Out11"
+      Position		      [755, 323, 785, 337]
+      Port		      "11"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Out12"
+      Position		      [680, 348, 710, 362]
+      Port		      "12"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Out13"
+      Position		      [725, 368, 755, 382]
+      Port		      "13"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Out14"
+      Position		      [775, 393, 805, 407]
+      Port		      "14"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Out15"
+      Position		      [655, 423, 685, 437]
+      Port		      "15"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Out16"
+      Position		      [715, 438, 745, 452]
+      Port		      "16"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Out17"
+      Position		      [775, 473, 805, 487]
+      Port		      "17"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Out18"
+      Position		      [655, 503, 685, 517]
+      Port		      "18"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Out19"
+      Position		      [745, 548, 775, 562]
+      Port		      "19"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Line {
+      SrcBlock		      "S-Function\nAircraft with \nsteady winds"
+      SrcPort		      1
+      DstBlock		      "Demux"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Mux"
+      SrcPort		      1
+      DstBlock		      "S-Function\nAircraft with \nsteady winds"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      1
+      Points		      [20, 0; 0, -40]
+      DstBlock		      "Out1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      2
+      Points		      [30, 0; 0, -40]
+      DstBlock		      "Out2"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      3
+      Points		      [40, 0; 0, -40]
+      DstBlock		      "Out3"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      4
+      Points		      [55, 0; 0, -25]
+      DstBlock		      "Out4"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      5
+      Points		      [60, 0; 0, -30]
+      DstBlock		      "Out5"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      6
+      Points		      [70, 0; 0, -25]
+      DstBlock		      "Out6"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      7
+      Points		      [80, 0; 0, -25]
+      DstBlock		      "Out7"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      8
+      Points		      [95, 0; 0, -25]
+      DstBlock		      "Out8"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      9
+      DstBlock		      "Out9"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      10
+      DstBlock		      "Out10"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      11
+      Points		      [180, 0]
+      DstBlock		      "Out11"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      12
+      Points		      [100, 0; 0, -10]
+      DstBlock		      "Out12"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      13
+      Points		      [90, 0; 0, -15]
+      DstBlock		      "Out13"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      14
+      Points		      [80, 0; 0, -15]
+      DstBlock		      "Out14"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      15
+      Points		      [30, 0; 0, -10]
+      DstBlock		      "Out15"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      16
+      Points		      [140, 0]
+      DstBlock		      "Out16"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      17
+      Points		      [200, 0]
+      DstBlock		      "Out17"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      18
+      Points		      [10, 0; 0, -5]
+      DstBlock		      "Out18"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      19
+      Points		      [145, 0; 0, 15]
+      DstBlock		      "Out19"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "In1"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "In4"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      4
+    }
+    Line {
+      SrcBlock		      "In5"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      5
+    }
+    Line {
+      SrcBlock		      "In6"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      6
+    }
+    Line {
+      SrcBlock		      "In7"
+      SrcPort		      1
+      Points		      [150, 0; 0, 5]
+      DstBlock		      "Mux"
+      DstPort		      7
+    }
+    Line {
+      SrcBlock		      "In3"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "In2"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      2
+    }
+    Annotation {
+      Position		      [390, 20]
+      Text		      "Matlab 6 Version: Flat Earth Aircraft Simulatio"
+"n With Steady Winds"
+      FontSize		      14
+      FontWeight	      "bold"
+    }
+    Annotation {
+      Position		      [416, 41]
+      Text		      "Version 7.0,10/9/02"
+    }
+    Annotation {
+      Position		      [350, 104]
+      Text		      "Inputs"
+    }
+    Annotation {
+      Position		      [539, 51]
+      Text		      "Outputs"
+    }
+  }
+}

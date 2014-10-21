@@ -1,0 +1,1322 @@
+Model {
+  Name			  "FlatEarth_MATLAB6"
+  Version		  4.00
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowStorageClass	  off
+  ExecutionOrder	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Mon Sep 23 14:43:12 2002"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "andrisan"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Fri Jan 24 15:06:13 2003"
+  ModelVersionFormat	  "1.%<AutoIncrement:19>"
+  ConfigurationManager	  "None"
+  SimParamPage		  "Solver"
+  StartTime		  "0.0"
+  StopTime		  "10.0"
+  SolverMode		  "Auto"
+  Solver		  "ode45"
+  RelTol		  "1e-3"
+  AbsTol		  "auto"
+  Refine		  "1"
+  MaxStep		  "auto"
+  MinStep		  "auto"
+  MaxNumMinSteps	  "-1"
+  InitialStep		  "auto"
+  FixedStep		  "auto"
+  MaxOrder		  5
+  OutputOption		  "RefineOutputTimes"
+  OutputTimes		  "[]"
+  LoadExternalInput	  off
+  ExternalInput		  "[t, u]"
+  SaveTime		  on
+  TimeSaveName		  "tout"
+  SaveState		  off
+  StateSaveName		  "xout"
+  SaveOutput		  on
+  OutputSaveName	  "yout"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  SaveFormat		  "Array"
+  LimitDataPoints	  on
+  MaxDataPoints		  "1000"
+  Decimation		  "1"
+  AlgebraicLoopMsg	  "warning"
+  MinStepSizeMsg	  "warning"
+  UnconnectedInputMsg	  "warning"
+  UnconnectedOutputMsg	  "warning"
+  UnconnectedLineMsg	  "warning"
+  InheritedTsInSrcMsg	  "warning"
+  SingleTaskRateTransMsg  "none"
+  MultiTaskRateTransMsg	  "error"
+  IntegerOverflowMsg	  "warning"
+  CheckForMatrixSingularity "none"
+  UnnecessaryDatatypeConvMsg "none"
+  Int32ToFloatConvMsg	  "warning"
+  InvalidFcnCallConnMsg	  "error"
+  SignalLabelMismatchMsg  "none"
+  LinearizationMsg	  "none"
+  VectorMatrixConversionMsg "none"
+  SfunCompatibilityCheckMsg "none"
+  BlockPriorityViolationMsg "warning"
+  ArrayBoundsChecking	  "none"
+  ConsistencyChecking	  "none"
+  ZeroCross		  on
+  Profile		  off
+  SimulationMode	  "normal"
+  RTWSystemTargetFile	  "grt.tlc"
+  RTWInlineParameters	  off
+  RTWRetainRTWFile	  off
+  RTWTemplateMakefile	  "grt_default_tmf"
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  TLCProfiler		  off
+  TLCDebug		  off
+  TLCCoverage		  off
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  ExtModeMexFile	  "ext_comm"
+  ExtModeBatchMode	  off
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  OptimizeBlockIOStorage  on
+  BufferReuse		  on
+  ParameterPooling	  on
+  BlockReductionOpt	  on
+  RTWExpressionDepthLimit 5
+  BooleanDataType	  off
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "FlatEarth_MATLAB6"
+    Location		    [93, 81, 948, 724]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "automatic"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      Step
+      Name		      "Aileron Perturbation (rad)"
+      Position		      [65, 190, 95, 220]
+      Time		      "1"
+      Before		      "0"
+      After		      "0"
+      SampleTime	      "0"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Aileron Trim (rad)"
+      Position		      [65, 245, 95, 275]
+      Value		      "uIC(2)"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Clock
+      Name		      "Clock"
+      Position		      [330, 585, 350, 605]
+      DisplayTime	      off
+      Decimation	      "10"
+    }
+    Block {
+      BlockType		      Demux
+      Name		      "Demux"
+      Ports		      [1, 19]
+      Position		      [545, 64, 555, 566]
+      BackgroundColor	      "black"
+      ShowName		      off
+      Outputs		      "19"
+      BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      Step
+      Name		      "Elevator Perturbation (rad)"
+      Position		      [60, 55, 90, 85]
+      Time		      "1"
+      Before		      "0"
+      After		      "0"
+      SampleTime	      "0"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Elevator Trim (rad)"
+      Position		      [60, 110, 90, 140]
+      Value		      "uIC(1)"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "H (ft)"
+      Ports		      [1]
+      Position		      [665, 334, 695, 366]
+      Floating		      off
+      Location		      [188, 365, 512, 604]
+      Open		      on
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      List {
+	ListType		SelectedSignals
+	axes1			""
+      }
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData11"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Step
+      Name		      "Horsepower Perturbation (hp)"
+      Position		      [75, 470, 105, 500]
+      Time		      "1"
+      Before		      "0"
+      After		      "0"
+      SampleTime	      "0"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Horsepower Trim (hp)"
+      Position		      [75, 525, 105, 555]
+      Value		      "uIC(4)"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "Mux"
+      Ports		      [7, 1]
+      Position		      [340, 115, 350, 515]
+      ShowName		      off
+      Inputs		      "7"
+      DisplayOption	      "bar"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "P (rad/sec)"
+      Ports		      [1]
+      Position		      [685, 149, 715, 181]
+      Floating		      off
+      Location		      [188, 365, 512, 604]
+      Open		      on
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      List {
+	ListType		SelectedSignals
+	axes1			""
+      }
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData3"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Phi (rad)"
+      Ports		      [1]
+      Position		      [725, 239, 755, 271]
+      Floating		      off
+      Location		      [188, 365, 512, 604]
+      Open		      on
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      List {
+	ListType		SelectedSignals
+	axes1			""
+      }
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData6"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Psi (rad)"
+      Ports		      [1]
+      Position		      [810, 279, 840, 311]
+      Floating		      off
+      Location		      [188, 365, 512, 604]
+      Open		      on
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      List {
+	ListType		SelectedSignals
+	axes1			""
+      }
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData8"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Q (rad/sec)"
+      Ports		      [1]
+      Position		      [820, 184, 850, 216]
+      Floating		      off
+      Location		      [36, 306, 360, 545]
+      Open		      on
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      List {
+	ListType		SelectedSignals
+	axes1			""
+      }
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData4"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "R (rad/sec)"
+      Ports		      [1]
+      Position		      [775, 214, 805, 246]
+      Floating		      off
+      Location		      [188, 365, 512, 604]
+      Open		      on
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      List {
+	ListType		SelectedSignals
+	axes1			""
+      }
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData5"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Step
+      Name		      "Rudder Perturbation (rad)"
+      Position		      [70, 335, 100, 365]
+      Time		      "1"
+      Before		      "0"
+      After		      "-10/57.3"
+      SampleTime	      "0"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Rudder Trim (rad)"
+      Position		      [70, 390, 100, 420]
+      Value		      "uIC(3)"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      "S-Function"
+      Name		      "S-Function\nAircraft with \nsteady winds"
+      Ports		      [1, 1]
+      Position		      [425, 300, 485, 330]
+      FunctionName	      "aircraft7"
+      Parameters	      "constant,xIC"
+      PortCounts	      "[]"
+      SFunctionModules	      "''"
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum"
+      Ports		      [2, 1]
+      Position		      [125, 60, 145, 80]
+      ShowName		      off
+      IconShape		      "round"
+      Inputs		      "|++"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum1"
+      Ports		      [2, 1]
+      Position		      [130, 195, 150, 215]
+      ShowName		      off
+      IconShape		      "round"
+      Inputs		      "|++"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum2"
+      Ports		      [2, 1]
+      Position		      [135, 340, 155, 360]
+      ShowName		      off
+      IconShape		      "round"
+      Inputs		      "|++"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum3"
+      Ports		      [2, 1]
+      Position		      [140, 475, 160, 495]
+      ShowName		      off
+      IconShape		      "round"
+      Inputs		      "|++"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Theta (rad)"
+      Ports		      [1]
+      Position		      [675, 259, 705, 291]
+      Floating		      off
+      Location		      [188, 365, 512, 604]
+      Open		      on
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      List {
+	ListType		SelectedSignals
+	axes1			""
+      }
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData7"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "To Workspace"
+      Position		      [630, 580, 690, 610]
+      VariableName	      "taircraft"
+      MaxDataPoints	      "inf"
+      Decimation	      "1"
+      SampleTime	      "-1"
+      SaveFormat	      "Array"
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "To Workspace1"
+      Position		      [430, 410, 490, 440]
+      Orientation	      "left"
+      VariableName	      "yaircraft"
+      MaxDataPoints	      "inf"
+      Decimation	      "1"
+      SampleTime	      "-1"
+      SaveFormat	      "Array"
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "To Workspace2"
+      Position		      [255, 55, 315, 85]
+      VariableName	      "deltaE"
+      MaxDataPoints	      "inf"
+      Decimation	      "1"
+      SampleTime	      "-1"
+      SaveFormat	      "Array"
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "To Workspace3"
+      Position		      [175, 160, 235, 190]
+      VariableName	      "deltaA"
+      MaxDataPoints	      "inf"
+      Decimation	      "1"
+      SampleTime	      "-1"
+      SaveFormat	      "Array"
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "To Workspace4"
+      Position		      [185, 215, 245, 245]
+      VariableName	      "deltaR"
+      MaxDataPoints	      "inf"
+      Decimation	      "1"
+      SampleTime	      "-1"
+      SaveFormat	      "Array"
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "To Workspace5"
+      Position		      [200, 270, 260, 300]
+      VariableName	      "deltabhp"
+      MaxDataPoints	      "inf"
+      Decimation	      "1"
+      SampleTime	      "-1"
+      SaveFormat	      "Array"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "U (ft/sec)"
+      Ports		      [1]
+      Position		      [815, 59, 845, 91]
+      Floating		      off
+      Location		      [188, 365, 512, 604]
+      Open		      on
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      List {
+	ListType		SelectedSignals
+	axes1			""
+      }
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "V (ft/sec)"
+      Ports		      [1]
+      Position		      [785, 94, 815, 126]
+      Floating		      off
+      Location		      [188, 365, 512, 604]
+      Open		      on
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      List {
+	ListType		SelectedSignals
+	axes1			""
+      }
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData1"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Vt (ft/sec)"
+      Ports		      [1]
+      Position		      [825, 384, 855, 416]
+      Floating		      off
+      Location		      [188, 365, 512, 604]
+      Open		      on
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      List {
+	ListType		SelectedSignals
+	axes1			""
+      }
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData12"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Vwx (ft/sec)"
+      Position		      [255, 355, 285, 385]
+      Value		      "uIC(5)"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Vwy (ft/sec)"
+      Position		      [260, 410, 290, 440]
+      Value		      "uIC(6)"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Vwz (ft/sec)"
+      Position		      [260, 465, 290, 495]
+      Value		      "uIC(7)"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "W (ft/sec)"
+      Ports		      [1]
+      Position		      [735, 119, 765, 151]
+      Floating		      off
+      Location		      [634, 343, 958, 582]
+      Open		      on
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      List {
+	ListType		SelectedSignals
+	axes1			""
+      }
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "0"
+      YMax		      "14"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData2"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "X (ft)"
+      Ports		      [1]
+      Position		      [770, 304, 800, 336]
+      Floating		      off
+      Location		      [188, 365, 512, 604]
+      Open		      on
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      List {
+	ListType		SelectedSignals
+	axes1			""
+      }
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData9"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Xdot (ft/s)"
+      Ports		      [1]
+      Position		      [830, 494, 860, 526]
+      Floating		      off
+      Location		      [188, 365, 512, 604]
+      Open		      on
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      List {
+	ListType		SelectedSignals
+	axes1			""
+      }
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData16"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Y (ft)"
+      Ports		      [1]
+      Position		      [715, 319, 745, 351]
+      Floating		      off
+      Location		      [188, 365, 512, 604]
+      Open		      on
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      List {
+	ListType		SelectedSignals
+	axes1			""
+      }
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData10"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Ydot (ft/s)"
+      Ports		      [1]
+      Position		      [775, 514, 805, 546]
+      Floating		      off
+      Location		      [188, 365, 512, 604]
+      Open		      on
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      List {
+	ListType		SelectedSignals
+	axes1			""
+      }
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData17"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Zdot (ft/sec)"
+      Ports		      [1]
+      Position		      [730, 539, 760, 571]
+      Floating		      off
+      Location		      [188, 365, 512, 604]
+      Open		      on
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      List {
+	ListType		SelectedSignals
+	axes1			""
+      }
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData18"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "alpha (rad)"
+      Ports		      [1]
+      Position		      [775, 404, 805, 436]
+      Floating		      off
+      Location		      [188, 365, 512, 604]
+      Open		      on
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      List {
+	ListType		SelectedSignals
+	axes1			""
+      }
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData13"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "beta (rad)"
+      Ports		      [1]
+      Position		      [735, 424, 765, 456]
+      Floating		      off
+      Location		      [188, 365, 512, 604]
+      Open		      on
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      List {
+	ListType		SelectedSignals
+	axes1			""
+      }
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData14"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "gamma(rad)"
+      Ports		      [1]
+      Position		      [680, 439, 710, 471]
+      Floating		      off
+      Location		      [188, 365, 512, 604]
+      Open		      on
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      List {
+	ListType		SelectedSignals
+	axes1			""
+      }
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData15"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      1
+      Points		      [120, 0; 0, -15]
+      DstBlock		      "U (ft/sec)"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      2
+      Points		      [105, 0; 0, -5]
+      DstBlock		      "V (ft/sec)"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      3
+      Points		      [80, 0; 0, -5]
+      DstBlock		      "W (ft/sec)"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      4
+      DstBlock		      "P (rad/sec)"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      5
+      Points		      [105, 0; 0, 10]
+      DstBlock		      "Q (rad/sec)"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      6
+      Points		      [95, 0; 0, 15]
+      DstBlock		      "R (rad/sec)"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      7
+      Points		      [75, 0; 0, 15]
+      DstBlock		      "Phi (rad)"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      8
+      Points		      [50, 0; 0, 10]
+      DstBlock		      "Theta (rad)"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      9
+      Points		      [105, 0; 0, 20; 100, 0; 0, -15]
+      DstBlock		      "Psi (rad)"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      10
+      Points		      [195, 0]
+      DstBlock		      "X (ft)"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      11
+      Points		      [100, 0; 0, -10; 40, 0]
+      DstBlock		      "Y (ft)"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      12
+      Points		      [45, 0; 0, -15]
+      DstBlock		      "H (ft)"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      13
+      Points		      [125, 0; 0, 10]
+      DstBlock		      "Vt (ft/sec)"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      14
+      Points		      [100, 0; 0, 5]
+      DstBlock		      "alpha (rad)"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      15
+      Points		      [115, 0; 0, -5; 45, 0]
+      DstBlock		      "beta (rad)"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      16
+      Points		      [50, 0; 0, -10]
+      DstBlock		      "gamma(rad)"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      17
+      Points		      [125, 0; 0, 20]
+      DstBlock		      "Xdot (ft/s)"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      18
+      Points		      [100, 0; 0, 15]
+      DstBlock		      "Ydot (ft/s)"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      19
+      Points		      [80, 0; 0, 15]
+      DstBlock		      "Zdot (ft/sec)"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Clock"
+      SrcPort		      1
+      DstBlock		      "To Workspace"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "S-Function\nAircraft with \nsteady winds"
+      SrcPort		      1
+      Points		      [15, 0]
+      Branch {
+	DstBlock		"Demux"
+	DstPort			1
+      }
+      Branch {
+	DstBlock		"To Workspace1"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Elevator Perturbation (rad)"
+      SrcPort		      1
+      DstBlock		      "Sum"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Elevator Trim (rad)"
+      SrcPort		      1
+      Points		      [40, 0]
+      DstBlock		      "Sum"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Aileron Perturbation (rad)"
+      SrcPort		      1
+      DstBlock		      "Sum1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Aileron Trim (rad)"
+      SrcPort		      1
+      Points		      [40, 0]
+      DstBlock		      "Sum1"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Rudder Perturbation (rad)"
+      SrcPort		      1
+      DstBlock		      "Sum2"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Rudder Trim (rad)"
+      SrcPort		      1
+      Points		      [40, 0]
+      DstBlock		      "Sum2"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Horsepower Perturbation (hp)"
+      SrcPort		      1
+      DstBlock		      "Sum3"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Horsepower Trim (hp)"
+      SrcPort		      1
+      Points		      [40, 0]
+      DstBlock		      "Sum3"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Sum"
+      SrcPort		      1
+      Points		      [85, 0]
+      Branch {
+	Points			[0, 80]
+	DstBlock		"Mux"
+	DstPort			1
+      }
+      Branch {
+	DstBlock		"To Workspace2"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Sum1"
+      SrcPort		      1
+      Points		      [5, 0]
+      Branch {
+	DstBlock		"Mux"
+	DstPort			2
+      }
+      Branch {
+	DstBlock		"To Workspace3"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Sum2"
+      SrcPort		      1
+      Points		      [0, -90]
+      Branch {
+	DstBlock		"Mux"
+	DstPort			3
+      }
+      Branch {
+	Points			[0, -30]
+	DstBlock		"To Workspace4"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Sum3"
+      SrcPort		      1
+      Points		      [20, 0; 0, -170]
+      Branch {
+	DstBlock		"Mux"
+	DstPort			4
+      }
+      Branch {
+	DstBlock		"To Workspace5"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Vwx (ft/sec)"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      5
+    }
+    Line {
+      SrcBlock		      "Vwy (ft/sec)"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      6
+    }
+    Line {
+      SrcBlock		      "Vwz (ft/sec)"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      7
+    }
+    Line {
+      SrcBlock		      "Mux"
+      SrcPort		      1
+      DstBlock		      "S-Function\nAircraft with \nsteady winds"
+      DstPort		      1
+    }
+    Annotation {
+      Position		      [390, 20]
+      Text		      "Matlab 6 Version: Flat Earth Aircraft Simulatio"
+"n With Steady Winds"
+      FontSize		      14
+      FontWeight	      "bold"
+    }
+    Annotation {
+      Position		      [416, 41]
+      Text		      "Version 7.0,10/9/02"
+    }
+    Annotation {
+      Position		      [236, 632]
+      Text		      "Be sure that \"constant,\" xIC and uIC are defi"
+"ned in the MATLAB workspace before running."
+    }
+    Annotation {
+      Position		      [231, 653]
+      Text		      "Aircraft specific constants are all in the arra"
+"y called \"constant\" in the MATLAB workspace."
+    }
+    Annotation {
+      Position		      [274, 347]
+      Text		      "Steady Winds"
+    }
+    Annotation {
+      Position		      [350, 104]
+      Text		      "Inputs"
+    }
+    Annotation {
+      Position		      [539, 51]
+      Text		      "Outputs"
+    }
+    Annotation {
+      Position		      [155, 39]
+      Text		      "Run Predator Initialize7.m before runnning this"
+" simulation"
+    }
+  }
+}
