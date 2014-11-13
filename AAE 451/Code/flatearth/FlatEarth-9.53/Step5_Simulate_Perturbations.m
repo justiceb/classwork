@@ -32,9 +32,9 @@ echo on
 %
 %Perturbations to the controls.
 %
-deltaEpertRAD=1/57.29577 % Use this for elevator step
+deltaEpertRAD=0/57.29577 % Use this for elevator step
 %deltaEpertRAD=0          % Use this for step in other controller
-deltaApertRAD=0/57.29577 % Use this for aileron step
+deltaApertRAD=-1/57.29577 % Use this for aileron step
 %deltaApertRAD=0;         % Use this for step in other controller
 deltaRpertRAD=0/57.29577 % Use this for rudder step
 %deltaRpertRAD=0;        % Use this for step in other controller
