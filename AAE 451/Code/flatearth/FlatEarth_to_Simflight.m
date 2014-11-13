@@ -1,7 +1,7 @@
 addpath FlatEarth-9.53
 
 clc; clear all; close all; format short g
-Basic_Constants_MPX5
+Basic_Constants_CDR
 Make_Constants  % Creates the array called constant used to define the aerodynamics and mass properties of the aircraft.
 Check_Constants % Check the constants for believability.
 Step2_Trim
