@@ -115,16 +115,20 @@ xlabel('time (s)')
 ylabel('Nsats')
 grid on
 
+%% 3D plot
+lat = flash.GPS(:,7);
+long = flash.GPS(:,8);
+gps_alt = flash.GPS(:,10);
+trajectory_flash = [gps_alt,long,lat];
 
+lat = radio.lat_mavlink_gps_raw_int_t(:,2)*1E-7;
+long = radio.lon_mavlink_gps_raw_int_t(:,2)*1E-7;
+gps_alt = radio.alt_mavlink_gps_raw_int_t(:,2)*1E-3;
+trajectory_radio = [gps_alt,long,lat];
 
+trajector_spliced = [trajectory_radio(1:491,:);trajectory_flash];
 
-
-%{
-lat = GPS(:,7);
-long = GPS(:,8);
-gps_alt = GPS(:,10);
-gps_time = GPS(:,3);
-
-%format 3d trajectory
-trajectory = [gps_alt,long,lat];
-%}
+%figure(7)
+%time = radio.time_usec_mavlink_gps_raw_int_t(:,2) - radio.time_usec_mavlink_gps_raw_int_t(1,2);
+%plot(time/1000000,gps_alt)
+%492
