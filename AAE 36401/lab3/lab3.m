@@ -66,5 +66,14 @@ legend('SIM response','EXP response')
 xlim([0 14]);
 hold all
 
+%% plot poles
+poles = eig(Ai-Bi*K)
+figure(3)
+plot(real(poles),imag(poles),'x')
+xlabel('real')
+ylabel('imaginary')
+title('LQR method pole placement')
+axis([-16 1 -1.5 1.5])
+
 
 

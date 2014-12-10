@@ -7,7 +7,8 @@ m = W/g; %kg
 S = 174*0.092903; %m^2
 c = 4.9*0.3048; %m
 J2 = 1346*1.35581795; %kg*m^2
-el = 0.0278; %rads
+el_trim = 0.02778; %rads
+del = 7 * 0.0174532925; %rads
 rho = 1.225; %kg/m^3
 
 %lift constants
@@ -38,10 +39,10 @@ e = 0;
 eT = 0;
 
 %initial conditions
-V0 = 45;
+V0 = 55.83;
 theta0 = 0;
 q0 = 0;
-alpha0 = 0;
+alpha0 = 0.8*0.0174532925;
 p0 = 0;
 h0 = 1000;
 
@@ -52,27 +53,39 @@ h = simout.Data(:,2);
 V = simout.Data(:,3);
 alpha = simout.Data(:,4);
 gamma = simout.Data(:,5);
+theta = simout.Data(:,6);
+q = simout.Data(:,7);
 
 figure(1)
-subplot(2,2,1)
+subplot(3,2,1)
 plot(t,V)
 xlabel('time (s)')
 ylabel('Speed [mag(V)] (m/s)')
 grid on
-subplot(2,2,2)
+subplot(3,2,2)
 plot(t,alpha*57.2957795)
 xlabel('time (s)')
 ylabel('angle of attack [alpha] (deg)')
 grid on
-subplot(2,2,3)
+subplot(3,2,3)
 plot(t,gamma*57.2957795)
 xlabel('time (s)')
-ylabel('gamma (deg)')
+ylabel('flight path angle: gamma (deg)')
 grid on
-subplot(2,2,4)
+subplot(3,2,4)
 plot(t,h)
 xlabel('time (s)')
 ylabel('altitude [h] (m)')
+grid on
+subplot(3,2,5)
+plot(t,q*57.2957795 )
+xlabel('time (s)')
+ylabel('pitch rate [q] (deg/s)')
+grid on
+subplot(3,2,6)
+plot(t,theta*57.2957795 )
+xlabel('time (s)')
+ylabel('pitch angle [theta] (deg)')
 grid on
 figure(2)
 plot(p,h)
@@ -80,8 +93,22 @@ xlabel('downrange distance [p] (m)')
 ylabel('altitude [h] (m)')
 grid on
 
-
-
+figure(1)
+subplot(3,1,1)
+plot(t,q*57.2957795 )
+xlabel('time (s)')
+ylabel('pitch rate [q] (deg/s)')
+grid on
+subplot(3,1,2)
+plot(t,theta*57.2957795 )
+xlabel('time (s)')
+ylabel('pitch angle [theta] (deg)')
+grid on
+subplot(3,1,3)
+plot(p,h)
+xlabel('downrange distance [p] (m)')
+ylabel('altitude [h] (m)')
+grid on
 
 
 

@@ -1,9 +1,9 @@
 clc; clear; close all;
 
-run ('setup_lab_ip01_2_sip')
 CART_TYPE = 'IP02';
 IP02_LOAD_TYPE = 'WEIGHT';
-PEND_TYPE = 'LONG_24IN';
+PEND_TYPE = 'MEDIUM_12IN';
+run ('setup_lab_ip01_2_sip')
 IC_ALPHA0 = 0.2;
 IC_ALPHAdot0 = 0;
 xcdot_0 = 0;
